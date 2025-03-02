@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "voters",
+  "info": {
+    "singularName": "voter",
+    "pluralName": "voters",
+    "displayName": "Voter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Age": {
+      "type": "integer",
+      "required": true
+    },
+    "Relation": {
+      "type": "enumeration",
+      "enum": [
+        "Husband",
+        "Father"
+      ],
+      "required": true
+    },
+    "GuardianName": {
+      "type": "string",
+      "required": true
+    },
+    "Address": {
+      "type": "text",
+      "required": true
+    },
+    "area": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article.article",
+      "inversedBy": "voters"
+    },
+    "VoterId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
