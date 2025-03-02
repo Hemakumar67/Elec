@@ -1,12 +1,26 @@
 module.exports = [
-  'strapi::logger',
-  'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  {
+    name: 'strapi::security',
+  },
+  {
+    name: 'strapi::cors',
+  },
+  {
+    name: 'strapi::poweredBy',
+  },
+  {
+    name: 'strapi::logger',
+  },
+  {
+    name: 'strapi::query',
+  },
+  {
+    name: 'strapi::body',
+  },
+  {
+    name: 'strapi::favicon',
+  },
+  {
+    name: 'strapi::public',
+  },
 ];
